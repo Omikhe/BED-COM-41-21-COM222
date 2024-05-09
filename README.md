@@ -8,7 +8,7 @@ Something databasey!
 - `Email:` msakamike84@gmail.com | omikhe265@gmail.com
 - `COM222:` Database Systems
 
-# Repository layout
+# Repository file structure
 `resources/` - Contains the exercise files for each lab number
 
 `assignment_[number]/` - Contains solutions to each lab exercise and tasks in `resources/` diresctory
