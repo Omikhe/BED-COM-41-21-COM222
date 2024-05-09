@@ -11,5 +11,5 @@ Something databasey!
 # Repository layout
 `resources/` - Contains the exercise files for each lab number
 
-`assignment_[number]/` - Contains solutions to each lab exercises and tasks in `resources/` diresctory
+`assignment_[number]/` - Contains solutions to each lab exercise and tasks in `resources/` diresctory
 
