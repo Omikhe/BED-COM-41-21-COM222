@@ -165,13 +165,14 @@ LEFT JOIN PropertyForRent p ON s.staffNo = p.staffNo
 WHERE s.branchNo = 'B003'
 GROUP BY s.staffNo, s.fName, s.lName;
 
--- Question 5
-CREATE VIEW properties_managed_at_main_street AS
-SELECT p.PropertyNo, p.street, p.city, s.fName, s.lName
-FROM PropertyForRent p
-JOIN Staff s ON p.staffNo = s.staffNo
-JOIN Branch b ON s.branchNo = b.branchNo
-WHERE b.street = '163 Main St';
+-- Question 5 --with changes that every employee can be viewed
+CREATE VIEW PropertiesManagedByMainStreetStaff AS
+SELECT pf.PropertyNo, pf.street, pf.city, pf.postcode, pf.type, pf.rooms, pf.rent, pf.ownerNo, pf.staffNo, pf.branchNo
+FROM PropertyForRent pf
+LEFT JOIN Staff s ON pf.staffNo = s.staffNo
+JOIN Branch b ON pf.branchNo = b.branchNo
+WHERE b.street = '162 Main St';
+
 
 -- Question 6
 CREATE VIEW Property_or_Branch_office AS
